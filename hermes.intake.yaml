@@ -11,3 +11,4 @@ forbidden_paths:
   - hermes.intake.yaml
 no_autonomy_paths: []
 data_eligibility: deepseek-ok
+clickup_migration_enabled: true
