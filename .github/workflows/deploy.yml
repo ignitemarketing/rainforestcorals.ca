@@ -14,7 +14,8 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ${{ vars.CI_DEPLOY_RUNNER == 'paid' && 'ubuntu-latest' || 'omarchy-secrets' }}
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Checkout
